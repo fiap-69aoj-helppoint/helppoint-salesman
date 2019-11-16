@@ -1,10 +1,13 @@
 FROM openjdk:8-jdk-alpine
 
-LABEL source="https://github.com/fiap-69aoj/netflix-order" \
+LABEL source="https://github.com/fiap-69aoj-helppoint/helppoint-product" \
       maintainer="flavioso16@gmail.com"
 
-ADD ./target/order-0.0.1-SNAPSHOT.jar order.jar
+ADD ./target/salesman-0.0.1-SNAPSHOT.jar salesman.jar
+ADD ./docker-entrypoint.sh /
 
-EXPOSE 8090
+RUN chmod +x /docker-entrypoint.sh
 
-ENTRYPOINT ["java","-jar", "-Dspring.profiles.active=prod", "/order.jar"]
+EXPOSE 8092
+
+ENTRYPOINT ["/docker-entrypoint.sh"]
