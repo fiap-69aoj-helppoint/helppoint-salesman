@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: helppoint-salesman
+  profiles:
+    active:
+      dev
+  cloud:
+    config:
+      uri: http://helppoint-configuration-server:9091
+
+server:
+  port: 8091
