@@ -8,6 +8,6 @@ ADD ./docker-entrypoint.sh /
 
 RUN chmod +x /docker-entrypoint.sh
 
-EXPOSE 8092
+EXPOSE 8091
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
