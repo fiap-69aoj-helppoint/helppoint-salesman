@@ -35,6 +35,7 @@ public class KafkaConsumerConfig {
 
     public ConsumerFactory<String, String> helpRequestedConsumerFactory() {
         Map<String, Object> props = new HashMap<>();
+        System.out.println("###################################  " + bootstrapAddress);
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapAddress);
         props.put(ConsumerConfig.GROUP_ID_CONFIG, "group_id");
         return new DefaultKafkaConsumerFactory<>(props, new StringDeserializer(), new StringDeserializer());
