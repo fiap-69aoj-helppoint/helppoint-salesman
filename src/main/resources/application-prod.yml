@@ -10,3 +10,7 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://helppoint-discovery-server:8761/eureka/
+
+
+kafka:
+  bootstrapAddress: helppoint-kafka:9092
