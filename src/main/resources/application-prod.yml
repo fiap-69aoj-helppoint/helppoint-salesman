@@ -1,6 +1,8 @@
 spring:
   zipkin:
     baseUrl: http://zipkin:9411/
+  kafka:
+    bootstrap-servers: helppoint-kafka:9092
 
 eureka:
   instance:
