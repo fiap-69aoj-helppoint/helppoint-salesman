@@ -1,7 +1,7 @@
 #!/bin/sh
 
-echo 'Sleeping 20s...'
-sleep 20
+echo 'Sleeping 60s...'
+sleep 60
 
 echo 'Starting...'
 java -jar -Dspring.profiles.active=prod /salesman.jar
